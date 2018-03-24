@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="shortcut icon" href="http://bit.ly/ghfavicon" width=32px>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="prefetch" href="pause1.svg">
+	<link rel="prefetch" href="play1.svg">
+	<link rel="prefetch" href="stop1.svg">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="script.js" defer></script>
+<!-- 	<title>Text to Speech using JavaScript | rpsthecoder - Github Pages</title> -->
+
+  	<!-- Bootstrap -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
+      <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<!--navbar begins-->
+  <nav class="navbar navbar-inverse navbar-static-top" id="navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Immersive Textbook</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <!--Navbar Buttons-->
+          <li><a id="quizbutton" href="#" onclick="smoothScroll(document.getElementById('quiz'))" >Quiz Me</a></li>
+          <li><a id="exercisebutton" href="#" >Manipulate a Tree Structure</a></li>
+          <li><a id="sandbutton" href="#" onclick="smoothScroll(document.getElementById('sandbox'))">Sandbox Mode</a></li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--Split screen for Text and Simulator-->
+<div class="section">
+  <div class="modal-body column">
+    <div class="col-md-6 text-center">
+
+    <!--Buttons Begin-->
+	<br>
+  <!--Add Panel-->
+  <div class="panel panel-default" style="overflow-y: scroll; height: 700px; width: 600px">
+  <div class="panel-body"></div>
+
+  <!--Add Buttons-->
+  	<div class="buttons">
+  		<button id=play></button> <!-- &nbsp; -->
+  		<button id=pause></button> <!-- &nbsp; -->
+  		<button id=stop></button>
+  	</div>
+
+      <!--Book Content Here-->
+      <br>
+      <h2>Binary Search Trees</h2>
+      <br>
+      <br>
+      <article>
+        <h3 id="heading">Chapter 1</h3>
+        <p id="content"></p>
+        <br>
+        <h3 id="heading2">Chapter 2</h3>
+        <p id="content2"></p>
+        <br>
+        <h3 id="heading3">Chapter 3</h3>
+        <p id="content3"></p>
+        <br>
+        <!--Quiz at Bottom-->
+        <embed id="quiz" width="600" height="500" src="quiz.swf">
+      </article>
+        <br>
+      </div>
+</div>
+    <div class="col-md-6 text-center">
+      <br>
+        <!--Add Panel-->
+        <div class="panel panel-default" style="overflow-y: scroll; height: 700px; width: 600px">
+          <div class="panel-body"></div>
+            <h3>Simulator Zone</h3>
+            <!--Flash-->
+            <div id="sim">
+              <!--BST-->
+              <embed width="600" height="500" src="BST.swf">
+              <br>
+              <br>
+              <br>
+              <br>
+              <!--Sandbox Mode-->
+              <embed id="sandbox" width="600" height="500" src="sandbox.swf">
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </body>
+
+</html>
